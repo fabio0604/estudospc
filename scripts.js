@@ -1,7 +1,18 @@
 // Função para adicionar produto ao carrinho
 function adicionarAoCarrinho(produto, preco) {
-  // Esta é uma simulação simples, na prática você enviaria esses dados para um carrinho de compras ou serviço back-end
-  console.log(`"${produto}" foi adicionado ao carrinho por R$${preco}.`);
+  const carrinho = document.querySelector('.cart-items');
+
+  // Criar um novo item para o carrinho
+  const novoItem = document.createElement('li');
+  novoItem.innerText = `${produto} - R$${preco.toFixed(2)}`;
+
+  // Adicionar o novo item à lista de itens do carrinho
+  carrinho.appendChild(novoItem);
+
+  // Atualizar o total do carrinho
+  const totalAtual = parseFloat(document.querySelector('.cart-total').innerText);
+  const novoTotal = totalAtual + preco;
+  document.querySelector('.cart-total').innerText = novoTotal.toFixed(2);
 }
 
 // Obtemos todos os botões de compra
