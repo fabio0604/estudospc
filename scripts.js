@@ -27,6 +27,8 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   console.log('Nome de Usuário:', username);
   console.log('Senha:', password);
 
+  
+  
   // Você pode adicionar aqui a lógica para autenticação do usuário
   // Verificar se as credenciais são válidas, redirecionar para uma página de perfil, etc.
 });
