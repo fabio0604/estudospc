@@ -1,3 +1,19 @@
+// Função para lidar com o envio do formulário de login
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+  
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  // Aqui você pode adicionar lógica para verificar as credenciais do usuário
+  // Por enquanto, vamos apenas exibir os dados de login no console
+  console.log('Nome de Usuário:', username);
+  console.log('Senha:', password);
+
+  // Você pode adicionar aqui a lógica para autenticação do usuário
+  // Verificar se as credenciais são válidas, redirecionar para uma página de perfil, etc.
+});
+
 // Função para adicionar produto ao carrinho
 function adicionarAoCarrinho(produto, preco) {
   const carrinho = document.querySelector('.cart-items');
@@ -39,7 +55,7 @@ checkoutButton.addEventListener('click', () => {
   if (total > 0) {
     // Simula um pagamento ao exibir uma mensagem de confirmação
     alert(`Obrigado por sua compra! Pagamento de R$${total.toFixed(2)} realizado com sucesso via ${formaPagamento}.`);
-    
+
     // Limpa o carrinho após a compra ser confirmada
     const carrinho = document.querySelector('.cart-items');
     carrinho.innerHTML = '';
