@@ -1,3 +1,25 @@
+// Adicionando funcionalidade de feedback com estrelas
+const stars = document.querySelectorAll('.star');
+const feedbackDisplay = document.getElementById('feedback');
+
+stars.forEach(star => {
+  star.addEventListener('click', function() {
+    const value = parseInt(this.getAttribute('data-value'));
+    
+    // Ativar estrelas clicadas e desativar outras
+    stars.forEach(s => {
+      if (parseInt(s.getAttribute('data-value')) <= value) {
+        s.classList.add('active');
+      } else {
+        s.classList.remove('active');
+      }
+    });
+    
+    // Exibir o feedback selecionado
+    feedbackDisplay.textContent = value;
+  });
+});
+
 // Função para lidar com o envio do formulário de registro
 document.getElementById('register-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Impede o envio padrão do formulário

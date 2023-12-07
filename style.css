@@ -84,5 +84,16 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
   .site-header nav ul li a:hover {
     color: #ffd700; /* Altere a cor conforme necessário */
   }
-  
+
+  /* Estilos para as estrelas de avaliação */
+.star {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.star:hover,
+.star.active {
+  color: gold;
+}
+
 </style>
