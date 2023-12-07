@@ -34,10 +34,11 @@ buyButtons.forEach(button => {
 const checkoutButton = document.querySelector('.checkout-button');
 checkoutButton.addEventListener('click', () => {
   const total = parseFloat(document.querySelector('.cart-total').innerText);
+  const formaPagamento = document.getElementById('formas-pagamento').value;
   
   if (total > 0) {
     // Simula um pagamento ao exibir uma mensagem de confirmação
-    alert('Obrigado por sua compra! Pagamento no valor de R$' + total.toFixed(2) + ' realizado com sucesso.');
+    alert(`Obrigado por sua compra! Pagamento de R$${total.toFixed(2)} realizado com sucesso via ${formaPagamento}.`);
     
     // Limpa o carrinho após a compra ser confirmada
     const carrinho = document.querySelector('.cart-items');
