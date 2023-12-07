@@ -29,3 +29,21 @@ buyButtons.forEach(button => {
     adicionarAoCarrinho(produto, preco);
   });
 });
+
+// Evento de clique no botão Finalizar Compra
+const checkoutButton = document.querySelector('.checkout-button');
+checkoutButton.addEventListener('click', () => {
+  const total = parseFloat(document.querySelector('.cart-total').innerText);
+  
+  if (total > 0) {
+    // Simula um pagamento ao exibir uma mensagem de confirmação
+    alert('Obrigado por sua compra! Pagamento no valor de R$' + total.toFixed(2) + ' realizado com sucesso.');
+    
+    // Limpa o carrinho após a compra ser confirmada
+    const carrinho = document.querySelector('.cart-items');
+    carrinho.innerHTML = '';
+    document.querySelector('.cart-total').innerText = '0.00';
+  } else {
+    alert('Seu carrinho está vazio. Adicione itens antes de finalizar a compra.');
+  }
+});
