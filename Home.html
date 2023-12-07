@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfumes Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Perfumes Shop</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Perfumes Femininos</a>
+    <a href="#">Perfumes Masculinos</a>
+    <a href="#">Marcas</a>
+    <a href="#">Contato</a>
+  </nav>
+
+  <div class="login-section">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="username">Nome de Usuário:</label>
+      <input type="text" id="username" name="username" required><br><br>
+
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <input type="submit" value="Entrar">
+    </form>
+      <p>Ainda não possui uma conta? <a href="registro.html">Registrar</a></p>
+  </div>
+
+  <div class="container">
+    <div class="product">
+      <h2>Perfume La Vie Est Belle Feminino L'Eau De Parfum 100Ml</h2>
+      <img src="https://m.media-amazon.com/images/I/51efpzsZ7BL._AC_SX679_.jpg" alt="perfume 1"
+      <p>Descrição do Perfume 1.</p>
+      <p>R$99,99</p>
+      <button class="buy-button" data-product="Perfume 1" data-price="99.99">Comprar</button>
+    </div>
+
+      <div class="product">
+        <h2>Perfume 2</h2>
+        <p>Descrição do Perfume 1.</p>
+        <p>R$99,99</p>
+        <button class="buy-button" data-product="Perfume 1" data-price="99.99">Comprar</button>
+      </div>
+
+        <div class="product">
+          <h2>Perfume 3</h2>
+          <p>Descrição do Perfume 1.</p>
+          <p>R$99,99</p>
+          <button class="buy-button" data-product="Perfume 1" data-price="99.99">Comprar</button>
+        </div>
+    <!-- Outros produtos -->
+  </div>
+
+  <div class="cart">
+    <h2>Carrinho de Compras</h2>
+    <ul class="cart-items">
+      <!-- Aqui serão exibidos os itens adicionados ao carrinho -->
+    </ul>
+    <p>Total: R$<span class="cart-total">0.00</span></p>
+
+    <label for="formas-pagamento">Forma de Pagamento:</label>
+    <select id="formas-pagamento">
+      <option value="cartao-credito">Cartão de Crédito</option>
+      <option value="paypal">PayPal</option>
+      <option value="transferencia-bancaria">Transferência Bancária</option>
+    </select>
+
+    <button class="checkout-button">Finalizar Compra</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
