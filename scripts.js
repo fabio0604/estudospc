@@ -1,3 +1,20 @@
+// Função para lidar com o envio do formulário de registro
+document.getElementById('register-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+  
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Exibir os dados de registro no console (simulação)
+  console.log('Nome de Usuário:', username);
+  console.log('Email:', email);
+  console.log('Senha:', password);
+
+  // Aqui você pode adicionar lógica para enviar os dados do registro para um servidor ou back-end
+  // Por exemplo, fazer uma solicitação HTTP para um endpoint de registro
+});
+
 // Função para lidar com o envio do formulário de login
 document.getElementById('login-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Impede o envio padrão do formulário
